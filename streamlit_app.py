@@ -34,6 +34,13 @@ if ingredients_list:
   my_insert_stmt = """ insert into smoothies.public.orders(ingredients,name_on_order)
             values ('""" + ingredients_string + """','"""+name_on_order+"""')"""
 
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+st.text(fruityvice_response)   
+    
+    
+
+    
 
     
   time_to_insert = st. button ('Submit Order')
